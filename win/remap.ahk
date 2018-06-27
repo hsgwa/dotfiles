@@ -1,7 +1,6 @@
+XButton1::LButton
+XButton2::LButton
 
-Ctrl::LWin
-LWin::Ctrl
-RWin::Ctrl
 
 <!h::Send,{left}
 <!j::Send,{down}
