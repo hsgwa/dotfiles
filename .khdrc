@@ -16,6 +16,8 @@ prefix - escape		:    khd -e "mode activate default"
 # Give Focus To Window
 prefix - k            :    kwmc window -f next
 prefix - j            :    kwmc window -f prev
+prefix + shift - k    :    kwmc window -s next
+prefix + shift - j    :    kwmc window -s prev
 
 # Swap Focused Window
 prefix + shift - k	:    kwmc window -s next
