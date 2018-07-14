@@ -13,13 +13,12 @@ prefix - f			:    kwmc space -t float
 
 prefix - escape		:    khd -e "mode activate default"
 
-# Give Focus To Window
+# kwm settings
 prefix - k            :    kwmc window -f next
 prefix - j            :    kwmc window -f prev
 prefix + shift - k    :    kwmc window -s next
 prefix + shift - j    :    kwmc window -s prev
 
-# Swap Focused Window
 prefix + shift - k	:    kwmc window -s next
 prefix + shift - j	:    kwmc window -s prev
 
@@ -27,3 +26,10 @@ prefix - l	: kwmc space -fExperimental right
 prefix - h	: kwmc space -fExperimental left
 prefix + shift - l : kwmc window -m space right; kwmc space -fExperimental right
 prefix + shift - h : kwmc window -m space left; kwmc space -fExperimental left
+
+# tmux settings
+prefix - left : tmux select-pane -L
+prefix - down : tmux select-pane -D
+prefix - up : tmux select-pane -U
+prefix - right : tmux select-pane -R
+
