@@ -28,8 +28,8 @@ prefix + shift - l : kwmc window -m space right; kwmc space -fExperimental right
 prefix + shift - h : kwmc window -m space left; kwmc space -fExperimental left
 
 # tmux settings
-prefix - left : tmux select-pane -L
-prefix - down : tmux select-pane -D
-prefix - up : tmux select-pane -U
-prefix - right : tmux select-pane -R
+prefix - left  : khd -e "mode activate default"; khd -p "ctrl + shift - h"; khd -e "mode activate prefix"
+prefix - down  : khd -e "mode activate default"; khd -p "ctrl + shift - j"; khd -e "mode activate prefix"
+prefix - up    : khd -e "mode activate default"; khd -p "ctrl + shift - k"; khd -e "mode activate prefix"
+prefix - right : khd -e "mode activate default"; khd -p "ctrl + shift - l"; khd -e "mode activate prefix"
 
