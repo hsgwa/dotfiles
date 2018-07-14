@@ -1,4 +1,5 @@
 # Enable kwm compatibility mode
+khd mod_trigger_timeout 0.0
 khd mode prefix on_enter kwmc config border focused color 0x77FFFF00
 
 # Activate prefix mode
@@ -28,8 +29,8 @@ prefix + shift - l : kwmc window -m space right; kwmc space -fExperimental right
 prefix + shift - h : kwmc window -m space left; kwmc space -fExperimental left
 
 # tmux settings
-prefix - left  : khd -e "mode activate default"; khd -p "ctrl + shift - h"; khd -e "mode activate prefix"
-prefix - down  : khd -e "mode activate default"; khd -p "ctrl + shift - j"; khd -e "mode activate prefix"
-prefix - up    : khd -e "mode activate default"; khd -p "ctrl + shift - k"; khd -e "mode activate prefix"
-prefix - right : khd -e "mode activate default"; khd -p "ctrl + shift - l"; khd -e "mode activate prefix"
+prefix - left  : khd -e "mode activate default"; khd -p "ctrl - h"; khd -e "mode activate prefix"
+prefix - down  : khd -e "mode activate default"; khd -p "ctrl - j"; khd -e "mode activate prefix"
+prefix - up    : khd -e "mode activate default"; khd -p "ctrl - k"; khd -e "mode activate prefix"
+prefix - right : khd -e "mode activate default"; khd -p "ctrl - l"; khd -e "mode activate prefix"
 
