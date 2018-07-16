@@ -4,6 +4,7 @@ khd mode prefix on_enter kwmc config border focused color 0x77FFFF00
 
 # Activate prefix mode
 ctrl + shift - w	:    khd -e "mode activate prefix"
+# ctrl + shift - r : khd -e "reload"
 
 # Set Space Tiling Mode To BSP
 prefix - b			:    kwmc space -t bsp
@@ -23,10 +24,11 @@ prefix + shift - j    :    kwmc window -s prev
 prefix + shift - k	:    kwmc window -s next
 prefix + shift - j	:    kwmc window -s prev
 
-prefix - l	: kwmc space -fExperimental right
+prefix - l	: kwmc space -fExperimental right;
 prefix - h	: kwmc space -fExperimental left
-prefix + shift - l : kwmc window -m space right; kwmc space -fExperimental right
-prefix + shift - h : kwmc window -m space left; kwmc space -fExperimental left
+prefix + shift - l : export ID=`kwmc query window focused id`;kwmc window -m space right; kwmc space -fExperimental right& wait ; kwmc window -f " $ID ";
+prefix + shift - h : export ID=`kwmc query window focused id`;kwmc window -m space left; kwmc space -fExperimental left& wait ; kwmc window -f " $ID ";
+
 
 # tmux settings
 prefix - left  : khd -e "mode activate default"; khd -p "ctrl - h"; khd -e "mode activate prefix"
