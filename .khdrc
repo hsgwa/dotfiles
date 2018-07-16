@@ -3,7 +3,7 @@ khd mod_trigger_timeout 0.0
 khd mode prefix on_enter kwmc config border focused color 0x77FFFF00
 
 # Activate prefix mode
-ctrl + shift - w	:    khd -e "mode activate prefix"
+ctrl + shift - j	:    khd -e "mode activate prefix"
 # ctrl + shift - r : khd -e "reload"
 
 # Set Space Tiling Mode To BSP
