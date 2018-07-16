@@ -26,8 +26,8 @@ prefix + shift - j	:    kwmc window -s prev
 
 prefix - l	: kwmc space -fExperimental right;
 prefix - h	: kwmc space -fExperimental left
-prefix + shift - l : export ID=`kwmc query window focused id`;kwmc window -m space right; kwmc space -fExperimental right& wait ; kwmc window -f " $ID ";
-prefix + shift - h : export ID=`kwmc query window focused id`;kwmc window -m space left; kwmc space -fExperimental left& wait ; kwmc window -f " $ID ";
+prefix + shift - l : export ID=`kwmc query window focused id`;kwmc window -m space right; kwmc space -fExperimental right; sleep 1; kwmc window -f " $ID ";
+prefix + shift - h : export ID=`kwmc query window focused id`;kwmc window -m space left; kwmc space -fExperimental left; sleep 1; kwmc window -f " $ID ";
 
 
 # tmux settings
