@@ -14,6 +14,7 @@ prefix - f			:    kwmc space -t float
 # prefix - s			:    kwmc window -c split-mode toggle
 
 prefix - escape		:    khd -e "mode activate default"
+prefix - w  : khd -e "mode activate default"; khd -p "cmd - w"; khd -e "mode activate prefix"
 
 # kwm settings
 prefix - k            :    kwmc window -f next
