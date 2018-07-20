@@ -449,10 +449,12 @@ return
 	;E::View_setLayoutProperty("Axis", 0, +1, 3)
 	B::Window_toggleDecor()
 	R::Reload
-	#IF NOT WinActive("ahk_exe chrome.exe")
-	   W::Send, !{F4}
-	#IF
+	
 
+#if
+
+#if NOT WinActive("ahk_exe chrome.exe") AND  get_key_layout_mode("Window")
+   W::Send, !{F4}
 #if
 
 #if get_key_layout_mode("Default")
