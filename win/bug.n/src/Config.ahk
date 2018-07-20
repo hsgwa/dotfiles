@@ -414,7 +414,7 @@ Config_UI_saveSession() {
 initialize_key_layout_mode()
 return
 
-<^+W::
+<^+J::
 	set_key_layout_mode("Window")
 return
 
@@ -449,6 +449,10 @@ return
 	;E::View_setLayoutProperty("Axis", 0, +1, 3)
 	B::Window_toggleDecor()
 	R::Reload
+	#IF NOT WinActive("ahk_exe chrome.exe")
+	   W::Send, !{F4}
+	#IF
+
 #if
 
 #if get_key_layout_mode("Default")
