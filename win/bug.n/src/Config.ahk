@@ -66,7 +66,7 @@ Config_init() {
   Config_layoutAxis_#1      := 1
   Config_layoutAxis_#2      := 2
   Config_layoutAxis_#3      := 2
-  Config_layoutGapWidth     := 0
+  Config_layoutGapWidth     := 5
   Config_layoutMFactor      := 0.4
   Config_areaTraceTimeout   := 1000
   Config_continuouslyTraceAreas := False
@@ -442,12 +442,12 @@ return
 	#.::Manager_activateMonitor(0, +1)
 	#,::Manager_activateMonitor(0, -1)
 
-	#+Space::Monitor_toggleBar()
+	+Space::Monitor_toggleBar()
 
 	;#Left::View_setLayoutProperty("MFactor", 0, -0.05)
 	;#Right::View_setLayoutProperty("MFactor", 0, +0.05)
-	;T::View_setLayoutProperty("Axis", 0, +1, 1)
-	;E::View_setLayoutProperty("Axis", 0, +1, 3)
+	T::View_setLayoutProperty("Axis", 0, +1, 1)
+	E::View_setLayoutProperty("Axis", 0, +1, 3)
 	B::Window_toggleDecor()
 	R::Reload
 	
