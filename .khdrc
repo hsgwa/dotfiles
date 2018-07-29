@@ -21,10 +21,10 @@ ctrl + shift - k  [Google Chrome]:     khd -p "alt + cmd - right"
 prefix - r : khd -e "reload"
 prefix - k            :    kwmc window -f next
 prefix - j            :    kwmc window -f prev
-prefix + shift - k    [Google Chrome]: khd -e "mode activate default"; khd -p "alt + cmd - right"; khd -e "mode activate prefix"
-prefix + shift - j    [Google Chrome]: khd -e "mode activate default"; khd -p "alt + cmd -left"; khd -e "mode activate prefix"
-# prefix + shift - k    :    kwmc window -s next
-# prefix + shift - j    :    kwmc window -s prev
+prefix + shift - k    :    kwmc window -s next
+prefix + shift - j    :    kwmc window -s prev
+prefix - i    [Google Chrome]: khd -e "mode activate default"; khd -p "alt + cmd - right"; khd -e "mode activate prefix"
+prefix - u    [Google Chrome]: khd -e "mode activate default"; khd -p "alt + cmd -left"; khd -e "mode activate prefix"
 
 prefix - l	: kwmc space -fExperimental right;
 prefix - h	: kwmc space -fExperimental left
