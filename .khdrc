@@ -2,39 +2,27 @@
 khd mod_trigger_timeout 0.0
 khd mode prefix on_enter kwmc config border focused color 0x77FFFF00
 
-# Activate prefix mode
-ctrl + shift - j	:    khd -e "mode activate prefix"
-# ctrl + shift - r : khd -e "reload"
-
 # Set Space Tiling Mode To BSP
-prefix - b			:    kwmc space -t bsp
+ctrl + alt + cmd - b			:    kwmc space -t bsp
 
 # Set Space Tiling Mode To Floating
-prefix - f			:    kwmc space -t float
+ctrl + alt + cmd - f			:    kwmc space -t float
 # prefix - s			:    kwmc window -c split-mode toggle
 
-prefix - escape		:    khd -e "mode activate default"
-prefix - w  : khd -e "mode activate default"; khd -p "cmd - w"; khd -e "mode activate prefix"
+ctrl + alt + cmd - w  : khd -p "cmd - w";
 
 ctrl + shift - k  [Google Chrome]:     khd -p "alt + cmd - right"
 # kwm settings
-prefix - r : khd -e "reload"
-prefix - k            :    kwmc window -f next
-prefix - j            :    kwmc window -f prev
-prefix + shift - k    :    kwmc window -s next
-prefix + shift - j    :    kwmc window -s prev
-prefix - i    [Google Chrome]: khd -e "mode activate default"; khd -p "alt + cmd - right"; khd -e "mode activate prefix"
-prefix - u    [Google Chrome]: khd -e "mode activate default"; khd -p "alt + cmd -left"; khd -e "mode activate prefix"
+ctrl + alt + cmd - r : khd -e "reload"
+ctrl + alt + cmd - k            :    kwmc window -f next
+ctrl + alt + cmd - j            :    kwmc window -f prev
+ctrl + alt + cmd + shift - k    :    kwmc window -s next
+ctrl + alt + cmd + shift - j    :    kwmc window -s prev
+ctrl + alt + cmd - i    [Google Chrome]: khd -p "alt + cmd - right";
+ctrl + alt + cmd - u    [Google Chrome]: khd -p "alt + cmd -left";
 
-prefix - l	: kwmc space -fExperimental right;
-prefix - h	: kwmc space -fExperimental left
-prefix + shift - l : export ID=`kwmc query window focused id`;kwmc window -m space right; kwmc space -fExperimental right; sleep 1; kwmc window -f " $ID ";
-prefix + shift - h : export ID=`kwmc query window focused id`;kwmc window -m space left; kwmc space -fExperimental left; sleep 1; kwmc window -f " $ID ";
-
-
-# tmux settings
-prefix - left  : khd -e "mode activate default"; khd -p "ctrl - h"; khd -e "mode activate prefix"
-prefix - down  : khd -e "mode activate default"; khd -p "ctrl - j"; khd -e "mode activate prefix"
-prefix - up    : khd -e "mode activate default"; khd -p "ctrl - k"; khd -e "mode activate prefix"
-prefix - right : khd -e "mode activate default"; khd -p "ctrl - l"; khd -e "mode activate prefix"
+ctrl + alt + cmd - l	: kwmc space -fExperimental right;
+ctrl + alt + cmd - h	: kwmc space -fExperimental left
+ctrl + alt + cmd + shift - l : export ID=`kwmc query window focused id`;kwmc window -m space right; kwmc space -fExperimental right; sleep 1; kwmc window -f " $ID ";
+ctrl + alt + cmd + shift - h : export ID=`kwmc query window focused id`;kwmc window -m space left; kwmc space -fExperimental left; sleep 1; kwmc window -f " $ID ";
 
