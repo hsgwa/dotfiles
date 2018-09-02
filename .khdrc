@@ -23,6 +23,5 @@ ctrl + alt + cmd - u    [Google Chrome]: khd -p "alt + cmd -left";
 
 ctrl + alt + cmd - l	: kwmc space -fExperimental right;
 ctrl + alt + cmd - h	: kwmc space -fExperimental left
-ctrl + alt + cmd + shift - l : export ID=`kwmc query window focused id`;kwmc window -m space right; kwmc space -fExperimental right; sleep 1; kwmc window -f " $ID ";
-ctrl + alt + cmd + shift - h : export ID=`kwmc query window focused id`;kwmc window -m space left; kwmc space -fExperimental left; sleep 1; kwmc window -f " $ID ";
-
+ctrl + alt + cmd + shift - l : kwmc window -m space right; 
+ctrl + alt + cmd + shift - h : kwmc window -m space left;
