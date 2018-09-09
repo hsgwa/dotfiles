@@ -1,7 +1,7 @@
-#/bin/sh
+#!/bin/sh
 
 DISPLAY=":0.0"
-USER="user_name" # ユーザー名に変更する
+USER="hasegawa" # ユーザー名に変更する
 HOME=/home/$USER/
 export HOME DISPLAY
 DEVICE_NAME="Kensington Expert Wireless TB"
@@ -13,4 +13,4 @@ do
                 break
         fi
         sleep 1
-done                                                                                           
+done
