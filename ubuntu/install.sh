@@ -6,3 +6,4 @@ sudo chmod 700 /usr/local/bin/remap.sh
 sudo chmod 700 /usr/local/bin/remap_mouse.sh
 
 
+sudo ln -s /home/hasegawa/dotfiles/ubuntu/user /usr/share/X11/xkb/symbols/user
