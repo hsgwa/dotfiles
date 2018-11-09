@@ -13,3 +13,8 @@
 #IF NOT WinActive("ahk_exe chrome.exe") AND NOT WinActive("ahk_exe ttermpro.exe")
    >^W::Send, !{F4}
 #IF
+
+#IF WinActive("ahk_exe ttermpro.exe")
+   <^U::Send,^bp
+   <^I::Send,^bn
+#IF
