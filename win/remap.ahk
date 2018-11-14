@@ -10,7 +10,7 @@
 <!K::Send,{Up}
 <!L::Send,{Right}
 
-#IF NOT WinActive("ahk_exe chrome.exe") AND NOT WinActive("ahk_exe ttermpro.exe") AND NOT WinActive("ahk_exe thunderbird.exe")
+#IF NOT WinActive("ahk_exe chrome.exe") AND NOT WinActive("ahk_exe ttermpro.exe") AND NOT WinActive("ahk_exe thunderbird.exe") AND NOT WinActive("ahk_exe atom.exe")
    >^W::Send, !{F4}
 #IF
 
