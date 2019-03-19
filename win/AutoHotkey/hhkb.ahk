@@ -23,3 +23,8 @@
    <^U::Send,^+{Tab}
    <^I::Send,^{Tab}
 #IF
+
+#IF WinActive("ahk_exe devenv.exe")
+   <^U::Send,^!{PgUp}
+   <^I::Send,^!{PgDn}
+#IF
