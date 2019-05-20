@@ -32,6 +32,7 @@ set nobackup
 filetype on
 " swapファイルを作成しない
 set noswapfile
+set clipboard=unnamedplus
 
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
