@@ -1,4 +1,4 @@
-<^Space::Send,{vkF4sc029}
+>^Space::Send,{vkF4sc029}
 
 #IfWinActive ahk_class Chrome_WidgetWin_1
 <^U::Send,^+{Tab}
