@@ -1,2 +1,0 @@
-ACTION=="add", ATTRS{name}=="Kensington Expert Wireless TB", RUN+="/usr/local/bin/remap.sh"
-
