@@ -33,6 +33,7 @@ else
 	echo リポジトリ packages.microsoft.com/repos/vscode が見つかりました。リポジトリの追加をスキップします。
 fi
 sudo apt-get install code
+code --install-extension Shan.code-settings-sync
 
 sudo apt install -y ranger
 rm -rf ~/.config/ranger && ln -sf ~/dotfiles/ranger ~/.config/ranger
@@ -66,16 +67,12 @@ sudo apt -y autoremove
 sudo apt install -y python3-pip
 sudo pip3 install xkeysnail
 
-sudo cp config to /usr/local/etc
-sudo cp script to /usr/local/etc
-# sudo groupadd uinput
-# sudo gpasswd -a `whoami` input
-# sudo gpasswd -a `whoami` uinput
-# 
-# sudo cp ~/dotfiles/ubuntu/input.rules /etc/udev/rules.d/
-# sudo cp ~/dotfiles/ubuntu/uinput.rules /etc/udev/rules.d/
-# 
-# sudo udevadm control --reload-rules && udevadm trigger
-# sudo cp ~/dotfiles/ubuntu/config.py /usr/local/etc/
-# sudo cp ~/dotfiles/ubuntu/xkeysnail.service /etc/systemd/system
-# 
+sudo mkdir -p /etc/opt/xkeysnail
+sudo cp ~/dotfiles/ubuntu/config.py /etc/opt/xkeysnail
+
+mkdir ~/.config/systemd/users
+cp ~/dotfiles/ubuntu/xkeysnail.service ~/.config/systemd/user/
+
+systemctl --user enable xkeysnail
+systemctl --user start xkeysnail
+systemctl --user status xkeysnail

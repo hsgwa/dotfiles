@@ -1,6 +1,0 @@
-partial modifier_keys
-xkb_symbols "keymap" {
-  replace key <CAPS> { [ Control_L ] };
-  replace key <LCTL> { [ Caps_Lock ] };
-};
-
