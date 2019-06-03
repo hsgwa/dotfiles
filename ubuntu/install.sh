@@ -34,14 +34,30 @@ else
 fi
 sudo apt-get install code
 
-
 sudo apt install -y ranger
 rm -rf ~/.config/ranger && ln -sf ~/dotfiles/ranger ~/.config/ranger
+sudo apt install -y highlight lynx elinks poppler-utils mediainfo
+sudo apt install -y atool bzip2 cpio gzip lhasa lzma lzop p7zip tar unace unrar zip unzip
+sudo apt install -y ffmpegthumbnailer
 
 sudo apt install -y vim-gnome
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 
 sudo apt install -y tmux
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+
+# ウインドウマネージャをi3-wmに変更
+sudo apt install -y i3-wm
+sudo apt install -y i3status
+sudo apt install -y dmenu
+sudo apt install -y xsel
+sudo apt install -y jq
+
+# nautilusでデスクトップウインドウを非表示にする
+gsettings set org.gnome.desktop.background show-desktop-icons false
+rm -rf ~/.config/i3 && ln -sf ~/dotfiles/i3 ~/.config/i3
+
+sudo apt install -y nkf
+sudo apt install -y manpages-ja manpages-ja-dev
 
 sudo apt -y autoremove
