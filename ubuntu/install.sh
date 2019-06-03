@@ -61,3 +61,21 @@ sudo apt install -y nkf
 sudo apt install -y manpages-ja manpages-ja-dev
 
 sudo apt -y autoremove
+
+# xkey-snail
+sudo apt install -y python3-pip
+sudo pip3 install xkeysnail
+
+sudo cp config to /usr/local/etc
+sudo cp script to /usr/local/etc
+# sudo groupadd uinput
+# sudo gpasswd -a `whoami` input
+# sudo gpasswd -a `whoami` uinput
+# 
+# sudo cp ~/dotfiles/ubuntu/input.rules /etc/udev/rules.d/
+# sudo cp ~/dotfiles/ubuntu/uinput.rules /etc/udev/rules.d/
+# 
+# sudo udevadm control --reload-rules && udevadm trigger
+# sudo cp ~/dotfiles/ubuntu/config.py /usr/local/etc/
+# sudo cp ~/dotfiles/ubuntu/xkeysnail.service /etc/systemd/system
+# 
