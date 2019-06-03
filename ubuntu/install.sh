@@ -76,3 +76,5 @@ cp ~/dotfiles/ubuntu/xkeysnail.service ~/.config/systemd/user/
 systemctl --user enable xkeysnail
 systemctl --user start xkeysnail
 systemctl --user status xkeysnail
+
+sudo apt install -y feh
