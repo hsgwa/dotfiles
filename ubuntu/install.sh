@@ -78,3 +78,7 @@ systemctl --user start xkeysnail
 systemctl --user status xkeysnail
 
 sudo apt install -y feh
+sudo apt install -y blueman
+sudo apt install -y pulseaudio-*
+sudo apt install pulseaudio-module-bluetooth
+sudo apt install pavucontrol
