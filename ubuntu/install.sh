@@ -70,7 +70,7 @@ sudo pip3 install xkeysnail
 sudo mkdir -p /etc/opt/xkeysnail
 sudo cp ~/dotfiles/ubuntu/config.py /etc/opt/xkeysnail
 
-mkdir ~/.config/systemd/users
+mkdir -p ~/.config/systemd/user
 cp ~/dotfiles/ubuntu/xkeysnail.service ~/.config/systemd/user/
 
 systemctl --user enable xkeysnail

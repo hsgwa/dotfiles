@@ -7,14 +7,6 @@ define_modmap({
 	Key.RIGHT_META: Key.RIGHT_CTRL,
 	Key.RIGHT_CTRL: Key.RIGHT_META,
 })
-define_keymap(re.compile("Gnome-terminal"), {
-	K("Super-i"): [K("Ctrl-b"), K("n"), K("Esc")],
-	K("Super-u"): [K("Ctrl-b"), K("p"), K("Esc")],
-	K("Alt-h"): [K("Ctrl-b"), K("h"), K("Esc")],
-	K("Alt-j"): [K("Ctrl-b"), K("j"), K("Esc")],
-	K("Alt-k"): [K("Ctrl-b"), K("k"), K("Esc")],
-	K("Alt-l"): [K("Ctrl-b"), K("l"), K("Esc")],
-}, "Terminal")
 
 define_keymap(None, {
 	K("Alt-h"): K("LEFT"),
@@ -28,6 +20,11 @@ define_keymap(None, {
 	K("Super-k"): [K("Super-k"), K("Esc")],
 	K("Super-l"): [K("Super-l"), K("Esc")],
 }, "Default")
+
+define_keymap(re.compile("Gnome-terminal"), {
+	K("Super-i"): [K("Ctrl-b"), K("n"), K("Esc")],
+	K("Super-u"): [K("Ctrl-b"), K("p"), K("Esc")],
+}, "Terminal")
 
 define_keymap(re.compile("Google-chrome"), {
 	K("Super-i"): K("Ctrl-TAB"),

@@ -1,5 +1,6 @@
 # 1. Copy this to ~/.config/systemd/user/xkeysnail.service
-# 2. systemctl --user enable xkeysnail
+# 2. Add sudoers "user_name ALL=(ALL) NOPASSWD: /usr/local/bin/xkeysnail"
+# 3. systemctl --user enable xkeysnail
 #
 # Note that you need to set proper $DISPLAY on your environment.
 
