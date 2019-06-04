@@ -7,28 +7,24 @@ sudo apt upgrade
 sudo apt install -y compizconfig-settings-manager compiz-plugins-extra
 
 # 輝度の調整
-if [ "$(grep -r apandada1 /etc/apt/*)" = "" ]; then
-	echo リポジトリ ppa:apandada1/brightness-controller が見つかりません。リポジトリの追加をします。
+if [ "$(grep -r apandada1/brightness-controller /etc/apt)" = "" ]; then
+	echo リポジトリ apandada1/brightness-controller が見つかりません。リポジトリの追加をします。
 	sudo apt-add-repository ppa:apandada1/brightness-controller
 	sudo apt update
 else
-	echo リポジトリ ppa:apandada1/brightness-controller が見つかりました。リポジトリの追加をスキップします。
+	echo リポジトリ apandada1/brightness-controller が見つかりました。リポジトリの追加をスキップします。
 fi
 
 sudo apt install -y brightness-controller
 
 # Visual Studio Code のインストール
-if [ "$(grep -r apandada1 /etc/apt/*)" = "" ]; then
+if [ "$(grep -r vscode /etc/apt)" = "" ]; then
 	echo リポジトリ packages.microsoft.com/repos/vscode が見つかりません。リポジトリの追加をします。
 	curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 	sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 	rm -f microsoft.gpg
 	sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 	sudo apt-get update
-
-	sudo apt-add-repository ppa:apandada1/brightness-controller
-	sudo apt update
-
 else
 	echo リポジトリ packages.microsoft.com/repos/vscode が見つかりました。リポジトリの追加をスキップします。
 fi
@@ -82,3 +78,13 @@ sudo apt install -y blueman
 sudo apt install -y pulseaudio-*
 sudo apt install pulseaudio-module-bluetooth
 sudo apt install pavucontrol
+
+# SimpleScreenRecorder のインストール
+if [ "$(grep -r maarten-baert/simplescreenrecorder /etc/apt)" = "" ]; then
+	echo リポジトリ maarten-baert/simplescreenrecorder が見つかりません。リポジトリの追加をします。
+	sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+	sudo apt-get update
+else
+	echo リポジトリ maarten-baert/simplescreenrecorder が見つかりました。リポジトリの追加をスキップします。
+fi
+sudo apt-get install simplescreenrecorder
