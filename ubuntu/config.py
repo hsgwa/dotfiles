@@ -27,7 +27,9 @@ define_keymap(re.compile("Gnome-terminal"), {
 }, "Terminal")
 
 define_keymap(re.compile("Google-chrome"), {
-	K("Super-i"): K("Ctrl-TAB"),
-	K("Super-u"): K("Ctrl-Shift-TAB"),
+	K("Super-i"): K("Ctrl-PAGE_DOWN"),
+	K("Super-u"): K("Ctrl-PAGE_UP"),
+	K("Shift-Super-i"): K("Ctrl-Shift-PAGE_DOWN"),
+	K("Super-Shift-u"): K("Ctrl-Shift-PAGE_UP"),
 }, "Chrome")
 
