@@ -88,3 +88,5 @@ else
 	echo リポジトリ maarten-baert/simplescreenrecorder が見つかりました。リポジトリの追加をスキップします。
 fi
 sudo apt-get install simplescreenrecorder
+
+sudo apt install -y filezilla
