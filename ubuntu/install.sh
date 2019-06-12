@@ -90,3 +90,4 @@ fi
 sudo apt-get install simplescreenrecorder
 
 sudo apt install -y filezilla
+sudo apt install -y inkscape
