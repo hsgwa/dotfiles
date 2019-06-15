@@ -42,19 +42,6 @@ bindsym $mod+q kill
 # installed.
 bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 
-set workspace_size_per_monitor 5
-
-workspace 1 output $primary_monitor
-workspace 2 output $primary_monitor
-workspace 3 output $primary_monitor
-workspace 4 output $primary_monitor
-workspace 5 output $primary_monitor
-workspace 6 output $secondary_monitor
-workspace 7 output $secondary_monitor
-workspace 8 output $secondary_monitor
-workspace 9 output $secondary_monitor
-workspace 10 output $secondary_monitor
-
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus right
@@ -134,8 +121,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $primary_monitor DVI-D-0
-set $secondary_monitor HDMI-0
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status

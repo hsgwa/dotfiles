@@ -53,6 +53,8 @@ sudo apt install -y jq
 # nautilusでデスクトップウインドウを非表示にする
 gsettings set org.gnome.desktop.background show-desktop-icons false
 rm -rf ~/.config/i3 && ln -sf ~/dotfiles/i3 ~/.config/i3
+mkdir -p ~/.config/i3
+sh ~/dotfiles/i3/apply_local_config.sh
 
 sudo apt install -y nkf
 sudo apt install -y manpages-ja manpages-ja-dev
@@ -76,8 +78,8 @@ systemctl --user status xkeysnail
 sudo apt install -y feh
 sudo apt install -y blueman
 sudo apt install -y pulseaudio-*
-sudo apt install pulseaudio-module-bluetooth
-sudo apt install pavucontrol
+sudo apt install -y pulseaudio-module-bluetooth
+sudo apt install -y pavucontrol
 
 # SimpleScreenRecorder のインストール
 if [ "$(grep -r maarten-baert/simplescreenrecorder /etc/apt)" = "" ]; then
@@ -87,7 +89,7 @@ if [ "$(grep -r maarten-baert/simplescreenrecorder /etc/apt)" = "" ]; then
 else
 	echo リポジトリ maarten-baert/simplescreenrecorder が見つかりました。リポジトリの追加をスキップします。
 fi
-sudo apt-get install simplescreenrecorder
+sudo apt install -y simplescreenrecorder
 
 sudo apt install -y filezilla
 sudo apt install -y inkscape
