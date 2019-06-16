@@ -52,8 +52,7 @@ sudo apt install -y jq
 
 # nautilusでデスクトップウインドウを非表示にする
 gsettings set org.gnome.desktop.background show-desktop-icons false
-rm -rf ~/.config/i3 && ln -sf ~/dotfiles/i3 ~/.config/i3
-mkdir -p ~/.config/i3
+rm -rf ~/.config/i3 && mkdir -p ~/.config/i3
 sh ~/dotfiles/i3/apply_local_config.sh
 
 sudo apt install -y nkf
@@ -73,7 +72,6 @@ cp ~/dotfiles/ubuntu/xkeysnail.service ~/.config/systemd/user/
 
 systemctl --user enable xkeysnail
 systemctl --user start xkeysnail
-systemctl --user status xkeysnail
 
 sudo apt install -y feh
 sudo apt install -y blueman

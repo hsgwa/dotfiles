@@ -3,8 +3,10 @@
 # 
 # echo ~/dotfiles/ubuntu/dual_monitor.sh > ~/.xprofile
 # echo ~/dotfiles/i3/apply_local_config.sh >> ~/.xprofile
+cd `dirname $0`
 
-echo > config
+
+echo > ~/.config/i3/config
 
 workspace_size=5
 
@@ -26,14 +28,14 @@ for i in `seq $monitor_num`; do
 
 		# primary monitor
 		if [ $i -eq 1 ]; then
-			echo workspace $workspace_idx output $primary_monitor >> config
+			echo workspace $workspace_idx output $primary_monitor >> ~/.config/i3/config
 		elif  [ $i -eq 2 ]; then
-			echo workspace $workspace_idx output $secondary_monitor >> config
+			echo workspace $workspace_idx output $secondary_monitor >> ~/.config/i3/config
 		fi
 	done
 
 done
 
-cat config.base >> config
+cat config.base >> ~/.config/i3/config
 
 i3-msg reload

@@ -77,16 +77,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+l exec "~/.config/i3/move_to_next_workspace.sh"
-bindsym $mod+h exec "~/.config/i3/move_to_prev_workspace.sh"
-bindsym $mod+y exec "~/.config/i3/move_to_prev_monitor.sh"
-bindsym $mod+o exec "~/.config/i3/move_to_next_monitor.sh"
+bindsym $mod+l exec "~/dotfiles/i3/move_to_next_workspace.sh"
+bindsym $mod+h exec "~/dotfiles/i3/move_to_prev_workspace.sh"
+bindsym $mod+y exec "~/dotfiles/i3/move_to_prev_monitor.sh"
+bindsym $mod+o exec "~/dotfiles/i3/move_to_next_monitor.sh"
 
 # move focused container to workspace
-bindsym $mod+Shift+l exec "~/.config/i3/move_container_to_next_workspace.sh"
-bindsym $mod+Shift+h exec "~/.config/i3/move_container_to_prev_workspace.sh"
-bindsym $mod+Shift+y exec "~/.config/i3/move_container_to_prev_monitor.sh"
-bindsym $mod+Shift+o exec "~/.config/i3/move_container_to_next_monitor.sh"
+bindsym $mod+Shift+l exec "~/dotfiles/i3/move_container_to_next_workspace.sh"
+bindsym $mod+Shift+h exec "~/dotfiles/i3/move_container_to_prev_workspace.sh"
+bindsym $mod+Shift+y exec "~/dotfiles/i3/move_container_to_prev_monitor.sh"
+bindsym $mod+Shift+o exec "~/dotfiles/i3/move_container_to_next_monitor.sh"
 
 #reload the configuration file
 bindsym $mod+Shift+c reload
