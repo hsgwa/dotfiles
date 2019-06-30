@@ -16,6 +16,8 @@ define_keymap(None, {
 }, "Default")
 
 define_keymap(re.compile("Gnome-terminal"), {
+	K("Super-i"): [K("Ctrl-b"), K("n")],
+	K("Super-u"): [K("Ctrl-b"), K("p")],
 }, "Terminal")
 
 define_keymap(re.compile("Google-chrome"), {
