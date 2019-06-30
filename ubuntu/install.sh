@@ -91,3 +91,5 @@ sudo apt install -y simplescreenrecorder
 
 sudo apt install -y filezilla
 sudo apt install -y inkscape
+echo "Copy this setting to ~/.bashrc."
+echo "alias ranger='ranger --choosedir=\$HOME/.rangerdir; LASTDIR=\`cat \$HOME/.rangerdir\`; cd \$LASTDIR'"
