@@ -13,6 +13,10 @@ define_keymap(None, {
 	K("Alt-j"): K("DOWN"),
 	K("Alt-k"): K("UP"),
 	K("Alt-l"): K("RIGHT"),
+	K("Alt-n"): K("Shift-LEFT"),
+	K("Alt-m"): K("Shift-DOWN"),
+	K("Alt-COMMA"): K("Shift-UP"),
+	K("Alt-DOT"): K("Shift-RIGHT"),
 }, "Default")
 
 define_keymap(re.compile("Gnome-terminal"), {
