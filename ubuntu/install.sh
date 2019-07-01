@@ -88,6 +88,8 @@ else
 	echo リポジトリ maarten-baert/simplescreenrecorder が見つかりました。リポジトリの追加をスキップします。
 fi
 sudo apt install -y simplescreenrecorder
+sudo apt install -y binutils-avr gcc-avr avr-libc avrdude
+sudo apt install -y dfu-programmer
 
 sudo apt install -y filezilla
 sudo apt install -y inkscape
