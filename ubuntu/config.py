@@ -1,13 +1,6 @@
 import re
 from xkeysnail.transform import *
 
-define_modmap({
-	Key.LEFT_META: Key.RIGHT_CTRL,
-	Key.LEFT_CTRL: Key.LEFT_META,
-	Key.RIGHT_META: Key.RIGHT_CTRL,
-	Key.RIGHT_CTRL: Key.RIGHT_META,
-})
-
 define_keymap(None, {
 	K("Alt-h"): K("LEFT"),
 	K("Alt-j"): K("DOWN"),
