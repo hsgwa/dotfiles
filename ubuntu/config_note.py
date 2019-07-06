@@ -9,6 +9,7 @@ define_modmap({
        Key.HANJA: Key.RIGHT_CTRL,
        Key.HANGEUL: Key.RIGHT_CTRL,
        Key.YEN: Key.GRAVE,
+       Key.CAPSLOCK: Key.LEFT_ALT,
 })
 
 define_keymap(None, {
