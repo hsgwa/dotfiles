@@ -8,6 +8,7 @@ define_modmap({
        Key.RIGHT_CTRL: Key.RIGHT_META,
        Key.HANJA: Key.RIGHT_CTRL,
        Key.HANGEUL: Key.RIGHT_CTRL,
+       Key.YEN: Key.GRAVE,
 })
 
 define_keymap(None, {
