@@ -65,7 +65,7 @@ sudo apt install -y python3-pip
 sudo pip3 install xkeysnail
 
 sudo mkdir -p /etc/opt/xkeysnail
-sudo cp ~/dotfiles/ubuntu/config.py /etc/opt/xkeysnail
+sudo ln -sf ~/dotfiles/ubuntu/config.py /etc/opt/xkeysnail
 
 mkdir -p ~/.config/systemd/user
 cp ~/dotfiles/ubuntu/xkeysnail.service ~/.config/systemd/user/
