@@ -15,5 +15,4 @@ if [ $monitor_num -eq 2 ]; then
 	fi
 fi
 
-
-
+./reload_wallpaper.sh

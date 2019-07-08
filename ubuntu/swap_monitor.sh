@@ -7,3 +7,4 @@ if [ $monitor_num -eq 2 ]; then
 	xrandr --output $secondary_monitor --auto --primary --left-of $primary_monitor
 fi
 
+./reload_wallpaper.sh
