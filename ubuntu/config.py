@@ -24,3 +24,9 @@ define_keymap(re.compile("Google-chrome"), {
 	K("Super-Shift-u"): K("Ctrl-Shift-PAGE_UP"),
 }, "Chrome")
 
+define_keymap(re.compile("Thunderbird"), {
+	K("Super-i"): K("Ctrl-PAGE_DOWN"),
+	K("Super-u"): K("Ctrl-PAGE_UP"),
+	K("Shift-Super-i"): K("Ctrl-Shift-PAGE_DOWN"),
+	K("Super-Shift-u"): K("Ctrl-Shift-PAGE_UP"),
+}, "Thunderbird")
