@@ -97,4 +97,12 @@ echo "Copy this setting to ~/.bashrc."
 echo "-----------------"
 echo "alias ranger='ranger --choosedir=\$HOME/.rangerdir; LASTDIR=\`cat \$HOME/.rangerdir\`; cd \$LASTDIR'"
 echo "set -o vi"
+## \[ ... \] : encloses control sequence with \[ and \] for accurate word wrap
+## \033[xxm : changes the color of command line
+## \h : the hostname up to the first "."
+## \w : current working directory
+## \n : newline
+## \$ : "$" for non-root, "#" for root
+echo "export PS1='\n${debian_chroot:+($debian_chroot)}\u@\h:\w \n$ '"
+
 echo "-----------------"
