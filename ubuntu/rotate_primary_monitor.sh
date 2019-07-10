@@ -1,4 +1,5 @@
 #!/bin/sh
+cd `dirname $0`
 
 monitor_num=`xrandr --listmonitors | sed -e "1d" | wc -l`
 if [ $monitor_num -eq 2 ]; then
