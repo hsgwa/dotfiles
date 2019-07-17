@@ -1,5 +1,6 @@
 #!/bin/sh
 
+cd `dirname $0`
 monitor_num=`xrandr --listmonitors | sed -e "1d" | wc -l`
 if [ $monitor_num -eq 2 ]; then
 	primary_monitor=`xrandr --listmonitors | sed -e '1d' | head -n 1 | cut -d' ' -f 6`
