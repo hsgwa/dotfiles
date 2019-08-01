@@ -10,6 +10,8 @@ define_keymap(None, {
 	K("Alt-m"): K("Shift-DOWN"),
 	K("Alt-COMMA"): K("Shift-UP"),
 	K("Alt-DOT"): K("Shift-RIGHT"),
+	K("Alt-u"): K("PAGE_DOWN"),
+	K("Alt-i"): K("PAGE_UP"),
 }, "Default")
 
 define_keymap(re.compile("Gnome-terminal"), {
