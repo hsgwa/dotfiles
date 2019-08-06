@@ -79,6 +79,12 @@ sudo apt install -y pulseaudio-*
 sudo apt install -y pulseaudio-module-bluetooth
 sudo apt install -y pavucontrol
 
+# spacemacs
+sudo add-apt-repository ppa:kelleyk/emacs
+sudo apt-get update
+sudo apt-get install emacs25
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
 # SimpleScreenRecorder のインストール
 if [ "$(grep -r maarten-baert/simplescreenrecorder /etc/apt)" = "" ]; then
 	echo リポジトリ maarten-baert/simplescreenrecorder が見つかりません。リポジトリの追加をします。
