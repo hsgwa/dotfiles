@@ -80,10 +80,29 @@ sudo apt install -y pulseaudio-module-bluetooth
 sudo apt install -y pavucontrol
 
 # spacemacs
-sudo add-apt-repository ppa:kelleyk/emacs
-sudo apt-get update
-sudo apt-get install emacs25
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+# spacemacs のインストール
+if [ "$(grep -r emacs /etc/apt)" = "" ]; then
+	echo emacs が見つかりません。emacsのインストールをします。
+	sudo add-apt-repository ppa:kelleyk/emacs
+	sudo apt-get update
+	sudo apt-get install emacs25
+	git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+else
+	echo emacs が見つかりました。emacsのインストールをスキップします。
+fi
+
+# install Ricty Diminished
+if [ "$(fc-list | grep "Ricty Diminished")" = "" ]; then
+	sudo mkdir /usr/share/fonts/RictyDiminished/
+	git clone https://github.com/edihbrandon/RictyDiminished
+	cd RictyDiminished/
+	sudo cp *.ttf /usr/share/fonts/RictyDiminished/
+	sudo fc-cache -fv
+	rm -rf RictyDiminished
+else
+	echo フォントRicty Diminished が見つかりました。フォントの追加をスキップします。
+fi
 
 # SimpleScreenRecorder のインストール
 if [ "$(grep -r maarten-baert/simplescreenrecorder /etc/apt)" = "" ]; then
