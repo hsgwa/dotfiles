@@ -60,7 +60,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(color-theme-solarized)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -318,6 +318,9 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (unless (display-graphic-p)
     (setq linum-format "%5d u2502 "))
+  (set-terminal-parameter nil 'background-mode 'dark)
+  (set-frame-parameter nil 'background-mode 'dark)
+  (spacemacs/load-theme 'solarized)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -329,7 +332,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (csv-mode pyenv-mode orgit magit-gitflow magit-popup hl-todo helm-projectile projectile git-timemachine evil-magit magit transient git-commit with-editor company-anaconda auto-compile packed anaconda-mode pythonic yapfify xterm-color ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline smeargle shell-pop restart-emacs ranger rainbow-delimiters pyvenv pytest py-isort popwin pip-requirements persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree multi-term move-text mmm-mode markdown-toc macrostep lorem-ipsum live-py-mode linum-relative link-hint indent-guide hy-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-pydoc helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gitconfig-mode gitattributes-mode git-messenger git-link gh-md fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav dumb-jump diminish define-word cython-mode company-statistics column-enforce-mode clean-aindent-mode bracketed-paste auto-yasnippet auto-highlight-symbol aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+    (color-theme-solarized color-theme csv-mode pyenv-mode orgit magit-gitflow magit-popup hl-todo helm-projectile projectile git-timemachine evil-magit magit transient git-commit with-editor company-anaconda auto-compile packed anaconda-mode pythonic yapfify xterm-color ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline smeargle shell-pop restart-emacs ranger rainbow-delimiters pyvenv pytest py-isort popwin pip-requirements persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree multi-term move-text mmm-mode markdown-toc macrostep lorem-ipsum live-py-mode linum-relative link-hint indent-guide hy-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-pydoc helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gitconfig-mode gitattributes-mode git-messenger git-link gh-md fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav dumb-jump diminish define-word cython-mode company-statistics column-enforce-mode clean-aindent-mode bracketed-paste auto-yasnippet auto-highlight-symbol aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
