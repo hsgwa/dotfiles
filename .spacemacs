@@ -33,7 +33,6 @@ values."
    '(
      go
      csv
-     csv
      python
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -56,7 +55,9 @@ values."
      (ranger :variables
              ranger-show-preview t)
      (shell :variables shell-default-shell 'eshell)
+     (go :variables go-tab-width 4)
      )
+
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
