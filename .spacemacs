@@ -141,7 +141,7 @@ values."
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Ricty Diminished"
                                :size 15
-                               :weight normal
+                               :weight light
                                :width normal
                                :powerline-scale 1.1)
    ;; The leader key
@@ -322,6 +322,9 @@ you should place your code here."
   (set-terminal-parameter nil 'background-mode 'dark)
   (set-frame-parameter nil 'background-mode 'dark)
   (spacemacs/load-theme 'solarized)
+  (set-fontset-font
+   nil 'japanese-jisx0208
+   (font-spec :family "Ricty Diminished"))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
