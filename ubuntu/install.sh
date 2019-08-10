@@ -118,9 +118,11 @@ sudo apt install -y dfu-programmer
 
 sudo apt install -y filezilla
 sudo apt install -y inkscape
+sudo apt install -y sxiv
 echo "Copy this setting to ~/.bashrc."
 echo "-----------------"
 echo "alias ranger='ranger --choosedir=\$HOME/.rangerdir; LASTDIR=\`cat \$HOME/.rangerdir\`; cd \$LASTDIR'"
+echo alias s=\'sxiv -i \&\'
 echo "set -o vi"
 ## \[ ... \] : encloses control sequence with \[ and \] for accurate word wrap
 ## \033[xxm : changes the color of command line
