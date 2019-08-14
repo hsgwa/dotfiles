@@ -119,6 +119,14 @@ sudo apt install -y dfu-programmer
 sudo apt install -y filezilla
 sudo apt install -y inkscape
 sudo apt install -y sxiv
+
+if [ $(crontab -l | grep mouse.sh | wc -l ) -eq 0 ]; then
+	echo mouse.shをcrontabへ追加します。
+	echo "@reboot $(find ~/dotfiles/ -name mouse.sh | xargs -I@ readlink -f @)" | crontab
+else
+	echo mouse.shがcrontabに追加されています。処理をスキップします。
+fi
+
 echo "Copy this setting to ~/.bashrc."
 echo "-----------------"
 echo "alias ranger='ranger --choosedir=\$HOME/.rangerdir; LASTDIR=\`cat \$HOME/.rangerdir\`; cd \$LASTDIR'"
