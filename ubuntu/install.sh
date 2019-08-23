@@ -112,6 +112,21 @@ if [ "$(grep -r maarten-baert/simplescreenrecorder /etc/apt)" = "" ]; then
 else
 	echo リポジトリ maarten-baert/simplescreenrecorder が見つかりました。リポジトリの追加をスキップします。
 fi
+
+# pecoのインストール
+if [ -z `which peco` ]; then
+	echo  "pecoをインストールします"
+	cd /tmp
+	sudo wget "https://github.com/peco/peco/releases/download/v0.5.3/peco_linux_386.tar.gz"
+	sudo tar xzvf peco_linux_386.tar.gz
+	cd peco_linux_386
+	sudo chmod +x peco
+	sudo cp peco /usr/local/bin
+else
+	echo "peco見つかりました。pecoのインストールをスキップします。"
+fi
+
+
 sudo apt install -y simplescreenrecorder
 sudo apt install -y binutils-avr gcc-avr avr-libc avrdude
 sudo apt install -y dfu-programmer
