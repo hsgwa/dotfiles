@@ -16,6 +16,7 @@ else
 fi
 
 sudo apt install -y brightness-controller
+sudo apt install -y manpages-ja
 
 # Visual Studio Code のインストール
 if [ "$(grep -r vscode /etc/apt)" = "" ]; then
@@ -147,6 +148,7 @@ echo "-----------------"
 echo "alias ranger='ranger --choosedir=\$HOME/.rangerdir; LASTDIR=\`cat \$HOME/.rangerdir\`; cd \$LASTDIR'"
 echo alias s=\'sxiv -i \'
 echo "set -o vi"
+echo "export LANG=ja_JP.utf8"
 ## \[ ... \] : encloses control sequence with \[ and \] for accurate word wrap
 ## \033[xxm : changes the color of command line
 ## \h : the hostname up to the first "."
