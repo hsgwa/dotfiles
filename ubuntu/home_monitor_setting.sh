@@ -1,4 +1,6 @@
 #!/bin/sh
+cd `dirname $0`
+
 xrandr --output DP-1 --auto
 xrandr --output DVI-I-1-1 --auto --right-of DP-1
 

@@ -12,8 +12,8 @@ workspace_size=5
 
 monitor_num=`i3-msg -t get_workspaces | jq '.[] | select(.visible==true).output' | wc -l`
 
-primary_monitor=`i3-msg -t get_workspaces | jq '.[] | select(.visible==true).output'  | cut -d'"' -f2 | sed -e "1d"`
-secondary_monitor=`i3-msg -t get_workspaces | jq '.[] | select(.visible==true).output'  | cut -d'"' -f2 | sed -e "2d"`
+primary_monitor=`i3-msg -t get_workspaces | jq '.[] | select(.visible==true).output'  | cut -d'"' -f2 | sed -e "2d"`
+secondary_monitor=`i3-msg -t get_workspaces | jq '.[] | select(.visible==true).output'  | cut -d'"' -f2 | sed -e "1d"`
 
 echo $monitor_num
 echo $primary_monitor
