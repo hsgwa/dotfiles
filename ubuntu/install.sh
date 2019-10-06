@@ -30,6 +30,7 @@ else
 	echo リポジトリ packages.microsoft.com/repos/vscode が見つかりました。リポジトリの追加をスキップします。
 fi
 sudo apt-get install code
+sudo apt install -y code
 code --install-extension Shan.code-settings-sync
 
 sudo apt install -y ranger
