@@ -17,6 +17,7 @@ fi
 
 sudo apt install -y brightness-controller
 sudo apt install -y manpages-ja
+sudo apt install -y curl
 
 # Visual Studio Code のインストール
 if [ "$(grep -r vscode /etc/apt)" = "" ]; then
