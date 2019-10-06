@@ -1,5 +1,5 @@
 #!/bin/sh
-xrandr --output DP1 --auto
-xrandr --output DVI-I-1-1 --auto --right-of DP1
+xrandr --output DP-1 --off
+xrandr --output DVI-I-1-1 --off
 
-xrandr --output eDP1 --off
+xrandr --output eDP-1 --auto
