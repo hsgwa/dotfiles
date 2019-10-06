@@ -137,7 +137,7 @@ sudo apt install -y dfu-programmer
 sudo apt install -y filezilla
 sudo apt install -y inkscape
 sudo apt install -y sxiv
-sudo apt install -y tig
+sudo apt install -y tig, nfs-common
 
 if [ $(crontab -l | grep mouse.sh | wc -l ) -eq 0 ]; then
 	echo mouse.shをcrontabへ追加します。
