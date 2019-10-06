@@ -29,7 +29,6 @@ if [ "$(grep -r vscode /etc/apt)" = "" ]; then
 else
 	echo リポジトリ packages.microsoft.com/repos/vscode が見つかりました。リポジトリの追加をスキップします。
 fi
-sudo apt-get install code
 sudo apt install -y code
 code --install-extension Shan.code-settings-sync
 
@@ -59,6 +58,7 @@ sh ~/dotfiles/i3/apply_local_config.sh
 
 sudo apt install -y nkf
 sudo apt install -y manpages-ja manpages-ja-dev
+sudo apt install -y tree
 
 sudo apt -y autoremove
 
@@ -136,6 +136,7 @@ sudo apt install -y dfu-programmer
 sudo apt install -y filezilla
 sudo apt install -y inkscape
 sudo apt install -y sxiv
+sudo apt install -y tig
 
 if [ $(crontab -l | grep mouse.sh | wc -l ) -eq 0 ]; then
 	echo mouse.shをcrontabへ追加します。
