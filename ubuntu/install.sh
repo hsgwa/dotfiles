@@ -129,6 +129,18 @@ else
 	echo "peco見つかりました。pecoのインストールをスキップします。"
 fi
 
+# docker のインストール
+sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+if [ "$(grep -r docker /etc/apt)" = "" ]; then
+	echo リポジトリ docker が見つかりません。リポジトリの追加をします。
+	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+	sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+	sudo apt update -y
+	sudo apt install -y docker-ce
+else
+	echo リポジトリ maarten-baert/simplescreenrecorder が見つかりました。リポジトリの追加をスキップします。
+fi
+
 
 sudo apt install -y simplescreenrecorder
 sudo apt install -y binutils-avr gcc-avr avr-libc avrdude
@@ -138,6 +150,8 @@ sudo apt install -y filezilla
 sudo apt install -y inkscape
 sudo apt install -y sxiv
 sudo apt install -y tig, nfs-common
+sudo apt install -y docker-compose
+
 
 if [ $(crontab -l | grep mouse.sh | wc -l ) -eq 0 ]; then
 	echo mouse.shをcrontabへ追加します。
