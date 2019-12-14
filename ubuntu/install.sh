@@ -103,6 +103,7 @@ else
 	echo リポジトリ packages.microsoft.com/repos/vscode が見つかりました。リポジトリの追加をスキップします。
 fi
 sudo apt install -y octave
+sudo apt install -y liboctave-dev
 
 # install Ricty Diminished
 if [ "$(fc-list | grep "Ricty Diminished")" = "" ]; then
