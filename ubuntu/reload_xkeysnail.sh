@@ -1,4 +1,4 @@
 #!/bin/sh
 
-ps aux | grep xkeysnail | grep -v grep | awk '{ print "sudo kill -9", $2 }' | sh
-systemctl --user enable xkeysnail
+ps aux | grep xkeysnail | grep -v grep | perl -pe 's/ +/ /g' | cut -d' ' -f 2 | xargs -I@ sudo kill @
+systemctl --user restart xkeysnail
