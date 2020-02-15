@@ -61,6 +61,7 @@ sh ~/dotfiles/i3/apply_local_config.sh
 sudo apt install -y nkf
 sudo apt install -y manpages-ja manpages-ja-dev
 sudo apt install -y tree
+sudo apt install -y clang
 
 sudo apt -y autoremove
 
