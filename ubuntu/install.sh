@@ -91,7 +91,7 @@ if [ "$(grep -r emacs /etc/apt)" = "" ]; then
 	echo emacs が見つかりません。emacsのインストールをします。
 	sudo add-apt-repository ppa:kelleyk/emacs
 	sudo apt-get update
-	sudo apt-get install emacs25
+	sudo apt-get install emacs26
 	git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 else
 	echo emacs が見つかりました。emacsのインストールをスキップします。
