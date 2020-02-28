@@ -58,7 +58,10 @@ values."
      emacs-lisp
      git
      markdown
-     org
+     (org :variables
+          org-directory "/home/hasegawa/Documents/hgw_org"
+          org-default-notes-file "notes.org"
+          org-agenda-file "/home/hasegawa/Documents/hgw_org")
      latex
      (shell :variables
             shell-default-height 30
@@ -349,7 +352,7 @@ you should place your code here."
   (add-hook 'c++-mode-hook 'company-mode) ; 補完用
   (add-hook 'c++-mode-hook 'flycheck-mode) ; チェック用
   (add-hook 'c++-mode-hook #'lsp)
-  (setq org-todo-keywords '((sequence "TODO" "PROGRESS" "SUSPEND" "|" "DONE" "DELEGATED" "FAILED" "CANCELED")))
+  (setq org-todo-keywords '((sequence "TODO" "PROGRESS" "SUSPEND" "DELEGATED" "|" "DONE" "FAILED" "CANCELED")))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
