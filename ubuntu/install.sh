@@ -21,6 +21,7 @@ sudo apt install -y curl
 sudo apt install -y silversearcher-ag
 sudo apt install -y global
 sudo apt install -y clang-tools-8
+gem install taskjuggler
 
 # Visual Studio Code のインストール
 if [ "$(grep -r vscode /etc/apt)" = "" ]; then
