@@ -60,10 +60,7 @@ values."
      emacs-lisp
      git
      markdown
-     (org :variables
-          org-directory "/home/hasegawa/Documents/hgw_org"
-          org-default-notes-file "notes.org"
-          org-agenda-file "/home/hasegawa/Documents/hgw_org")
+     org
      latex
      (shell :variables
             shell-default-height 30
@@ -83,7 +80,8 @@ values."
                                       lsp-mode
                                       lsp-ui
                                       company-lsp
-                                      clang-format)
+                                      clang-format
+                                      org-scrum)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -354,7 +352,7 @@ you should place your code here."
   (add-hook 'c++-mode-hook 'company-mode) ; 補完用
   (add-hook 'c++-mode-hook 'flycheck-mode) ; チェック用
   (add-hook 'c++-mode-hook #'lsp)
-  (setq org-todo-keywords '((sequence "TODO" "PROGRESS" "SUSPEND" "DELEGATED" "|" "DONE" "FAILED" "CANCELED")))
+  (setq org-todo-keywords '((sequence "TODO" "PROGRESS" "SUSPEND" "|" "DELEGATED" "DONE" "FAILED")))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -367,6 +365,7 @@ you should place your code here."
  '(ansi-color-names-vector
    ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
  '(evil-want-Y-yank-to-eol nil)
+ '(org-scrum-ascii-graph nil)
  '(hl-todo-keyword-faces
    (quote
     (("TODO" . "#dc752f")
@@ -398,9 +397,18 @@ This function is called at the very end of Spacemacs initialization."
  '(ansi-color-names-vector
    ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
  '(evil-want-Y-yank-to-eol nil)
+ '(hl-todo-keyword-faces
+   (quote
+    (("TODO" . "#dc752f")
+     ("SUSPEND" . "#B3412A")
+     ("PROGRESS" . "#4f97d7")
+     ("DONE" . "#0EBF49")
+     ("FAILED" . "#CC1100")
+     ("CANCELED" . "#CC1100")
+     ("DELEGATED" . "#0EBF49"))))
  '(package-selected-packages
    (quote
-    (yasnippet-lean dap-mode linum-relative yasnippet-classic-snippets yasnippet-snippets company-auctex auctex org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download htmlize gnuplot helm-gtags ggtags disaster company-c-headers cmake-mode clang-format company-quickhelp web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern tern coffee-mode yaml-mode powerline smartparens hydra lv parent-mode request pkg-info epl flx highlight bind-map bind-key f dash s helm avy helm-core async popup goto-chg go-guru go-eldoc company-go go-mode markdown-mode dash-functional gitignore-mode pos-tip flycheck company yasnippet auto-complete color-theme-solarized color-theme csv-mode pyenv-mode orgit magit-gitflow magit-popup hl-todo helm-projectile projectile git-timemachine evil-magit magit transient git-commit with-editor company-anaconda auto-compile packed anaconda-mode pythonic yapfify xterm-color ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline smeargle shell-pop restart-emacs ranger rainbow-delimiters pyvenv pytest py-isort popwin pip-requirements persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree multi-term move-text mmm-mode markdown-toc macrostep lorem-ipsum live-py-mode link-hint indent-guide hy-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-pydoc helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gitconfig-mode gitattributes-mode git-messenger git-link gh-md fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav dumb-jump diminish define-word cython-mode company-statistics column-enforce-mode clean-aindent-mode bracketed-paste auto-yasnippet auto-highlight-symbol aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+    (org-scrum linum-relative yasnippet-classic-snippets yasnippet-snippets company-auctex auctex org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download htmlize gnuplot helm-gtags ggtags disaster company-c-headers cmake-mode clang-format company-quickhelp web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern tern coffee-mode yaml-mode powerline smartparens hydra lv parent-mode request pkg-info epl flx highlight bind-map bind-key f dash s helm avy helm-core async popup goto-chg go-guru go-eldoc company-go go-mode markdown-mode dash-functional gitignore-mode pos-tip flycheck company yasnippet auto-complete color-theme-solarized color-theme csv-mode pyenv-mode orgit magit-gitflow magit-popup hl-todo helm-projectile projectile git-timemachine evil-magit magit transient git-commit with-editor company-anaconda auto-compile packed anaconda-mode pythonic yapfify xterm-color ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline smeargle shell-pop restart-emacs ranger rainbow-delimiters pyvenv pytest py-isort popwin pip-requirements persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree multi-term move-text mmm-mode markdown-toc macrostep lorem-ipsum live-py-mode link-hint indent-guide hy-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-pydoc helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gitconfig-mode gitattributes-mode git-messenger git-link gh-md fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav dumb-jump diminish define-word cython-mode company-statistics column-enforce-mode clean-aindent-mode bracketed-paste auto-yasnippet auto-highlight-symbol aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
