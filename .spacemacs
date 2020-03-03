@@ -48,7 +48,9 @@ values."
      gtags
      lsp
      dap
-     (c-c++ :variables c-c++-enable-clang-support t)
+     (c-c++ :variables c-c++-enable-clang-support t
+            c-c++-enable-google-style t
+            c-c++-enable-google-newline t)
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t
                       auto-completion-enable-snippets-in-popup t
