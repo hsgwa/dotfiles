@@ -48,9 +48,12 @@ values."
      gtags
      lsp
      dap
-     (c-c++ :variables c-c++-enable-clang-support t
+     ;; (c-c++ :variables c-c++-enable-clang-support t)
+     (c-c++ :variables c-c++-adopt-subprojects t
+            c-c++-backend 'lsp-ccls
+            c-c++-lsp-enable-semantic-highlight 'rainbow
             c-c++-enable-google-style t
-            c-c++-enable-google-newline t)
+            lsp-ui-doc-enable	nil)
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t
                       auto-completion-enable-snippets-in-popup t
