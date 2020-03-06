@@ -365,6 +365,12 @@ you should place your code here."
                                 ))
   (setq org-scrum-ascii-graph nil)
   (setq org-agenda-files '("~/Dropbox/org/"))
+  (with-eval-after-load 'lsp-mode (lsp-register-client
+                                   (make-lsp-client
+                                    :new-connection (lsp-tramp-connection "clangd")
+                                    :major-modes '(c-mode c++-mode)
+                                    :remote? t
+                                    :server-id 'clangd)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
