@@ -42,7 +42,14 @@ values."
      octave
      go
      csv
-     python
+     (python :variables
+             python-backend 'lsp
+             ;; python-tab-width 4
+             python-fill-column 99
+             python-formatter 'yapf
+             python-format-on-save t
+             python-sort-imports-on-save t
+             python-pipenv-activate t)
      cmake
      helm
      gtags
@@ -51,9 +58,10 @@ values."
      ;; (c-c++ :variables c-c++-enable-clang-support t)
      (c-c++ :variables c-c++-adopt-subprojects t
             c-c++-backend 'lsp-clangd
-            c-c++-lsp-enable-semantic-highlight 'rainbow
+            ;; c-c++-lsp-enable-semantic-highlight 'rainbow ;; only available ccls and cquery
             c-c++-enable-google-style t
-            lsp-ui-doc-enable	nil)
+            lsp-ui-doc-enable	nil
+            )
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t
                       auto-completion-enable-snippets-in-popup t
@@ -79,12 +87,12 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(
-                                      lsp-mode
-                                      lsp-ui
-                                      company-lsp
-                                      clang-format
-                                      org-scrum)
+   ;; dotspacemacs-additional-packages '(
+   ;;                                    lsp-mode
+   ;;                                    lsp-ui
+   ;;                                    company-lsp
+   ;;                                    clang-format
+   ;;                                    org-scrum)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -352,9 +360,9 @@ you should place your code here."
    nil 'japanese-jisx0208
    (font-spec :family "Ricty Diminished"))
   (add-hook 'prog-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
-  (add-hook 'c++-mode-hook 'company-mode) ; 補完用
-  (add-hook 'c++-mode-hook 'flycheck-mode) ; チェック用
-  (add-hook 'c++-mode-hook #'lsp)
+  ;; (add-hook 'c++-mode-hook 'company-mode) ; 補完用
+  ;; (add-hook 'c++-mode-hook 'flycheck-mode) ; チェック用
+  ;; (add-hook 'c++-mode-hook #'lsp)
   (setq org-todo-keywords '((sequence "TODO" "PROGRESS" "SUSPEND" "|" "DELEGATED" "DONE" "FAILED")))
   (setq hl-todo-keyword-faces '(("TODO" . "#dc752f")
                                 ("SUSPEND" . "#B3412A")
@@ -365,12 +373,12 @@ you should place your code here."
                                 ))
   (setq org-scrum-ascii-graph nil)
   (setq org-agenda-files '("~/Dropbox/org/"))
-  (with-eval-after-load 'lsp-mode (lsp-register-client
-                                   (make-lsp-client
-                                    :new-connection (lsp-tramp-connection "clangd")
-                                    :major-modes '(c-mode c++-mode)
-                                    :remote? t
-                                    :server-id 'clangd)))
+  ;; (with-eval-after-load 'lsp-mode (lsp-register-client
+  ;;                                  (make-lsp-client
+  ;;                                   :new-connection (lsp-tramp-connection "clangd")
+  ;;                                   :major-modes '(c-mode c++-mode)
+  ;;                                   :remote? t
+  ;;                                   :server-id 'clangd)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
