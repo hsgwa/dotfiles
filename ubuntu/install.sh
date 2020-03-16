@@ -166,6 +166,7 @@ sudo apt install -y inkscape
 sudo apt install -y sxiv
 sudo apt install -y tig, nfs-common
 sudo apt install -y docker-compose
+sudo apt install -y texlive-base texlive-latex-base dvipng texlive-latex-extra
 
 
 if [ $(crontab -l | grep mouse.sh | wc -l ) -eq 0 ]; then
