@@ -151,6 +151,7 @@ bindsym $mod+p mode "$mode_system"
 exec --no-startup-id feh --bg-fill /usr/share/backgrounds/warty-final-ubuntu.png
 exec --no-startup-id dropbox start
 exec --no-startup-id ~/dotfiles/ubuntu/mouse.sh
+exec --no-startup-id ~/dotfiles/ubuntu/reload_wallpaper.sh
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume `pactl list sinks | grep Name | grep analog-stereo | grep pci | cut -d':' -f 2` +5%
