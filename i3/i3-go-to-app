@@ -3,8 +3,7 @@ cd `dirname $0`
 
 app=$1
 script_path=`readlink -f $0`
-echo $script_path $* > /tmp/i3_last_move_to_app.sh && chmod +x /tmp/i3_last_move_to_app.sh
-
+echo $script_path $* > /tmp/i3-last-go-to-app && chmod +x /tmp/i3-last-go-to-app
 
 echo target app is $app
 jq_args=".nodes[].nodes[].nodes[] | select(.nodes[].window_properties.class == $app) | .num"
