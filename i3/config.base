@@ -41,8 +41,8 @@ bindsym $mod+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+space exec --no-startup-id ~/dotfiles/i3/my_i3-dmenu-desktop.sh
-bindsym $mod+n exec --no-startup-id /tmp/i3_last_move_to_app.sh
+bindsym $mod+space exec --no-startup-id ~/dotfiles/i3/i3-dmenu-desktop-go-to-app-ws
+bindsym $mod+n exec --no-startup-id /tmp/i3-last-go-to-app
 
 # change focus
 bindsym $mod+j focus left
