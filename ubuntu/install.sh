@@ -51,7 +51,9 @@ ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 # ウインドウマネージャをi3-wmに変更
 sudo apt install -y i3-wm
+sudo apt install -y fcitx-mozc
 sudo apt install -y i3status
+sudo apt install -y fcitx-mozc
 sudo apt install -y dmenu
 sudo apt install -y xsel
 sudo apt install -y jq
