@@ -21,6 +21,13 @@ sudo apt install -y curl
 sudo apt install -y silversearcher-ag
 sudo apt install -y global
 sudo apt install -y clang-tools-8
+sudo apt install -y mu4e
+sudo apt install -y guile-2.2-dev html2text xdg-utils
+sudo apt install -y libwebkitgtk-3.0-dev
+sudo apt install -y offlineimap
+sudo apt install -y notmuch
+sudo apt install -y gnutls-bin
+# notmuch setup && notmuch new
 gem install taskjuggler
 
 # Visual Studio Code のインストール
