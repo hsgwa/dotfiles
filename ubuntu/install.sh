@@ -28,6 +28,7 @@ sudo apt install -y offlineimap
 sudo apt install -y notmuch
 sudo apt install -y gnutls-bin
 # notmuch setup && notmuch new
+sudo apt install -y sqlite3
 gem install taskjuggler
 
 # Visual Studio Code のインストール
