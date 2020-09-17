@@ -11,7 +11,7 @@ define_keymap(None, {
 	K("Alt-COMMA"): K("Shift-UP"),
 	K("Alt-DOT"): K("Shift-RIGHT"),
 	K("Alt-u"): K("PAGE_DOWN"),
-	K("Alt-j"): K("PAGE_UP"),
+	K("Alt-i"): K("PAGE_UP"),
 	K("Alt-KEY_1"): K("F1"),
 	K("Alt-KEY_2"): K("F2"),
 	K("Alt-KEY_3"): K("F3"),
