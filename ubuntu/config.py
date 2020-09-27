@@ -22,6 +22,7 @@ define_keymap(None, {
 	K("Alt-KEY_8"): K("F8"),
 	K("Alt-KEY_9"): K("F9"),
 	K("Alt-KEY_0"): K("F10"),
+	K("Alt-GRAVE"): K("DELETE"),
 }, "Default")
 
 define_keymap(re.compile("Gnome-terminal"), {
