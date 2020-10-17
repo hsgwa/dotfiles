@@ -27,6 +27,8 @@ define_keymap(None, {
 define_keymap(re.compile("Gnome-terminal"), {
 	K("Super-i"): [K("Ctrl-b"), K("n")],
 	K("Super-u"): [K("Ctrl-b"), K("p")],
+	K("Shift-Super-i"): [K("Ctrl-b"), K("g")],
+	K("Shift-Super-u"): [K("Ctrl-b"), K("v")],
 }, "Terminal")
 
 define_keymap(re.compile("Google-chrome"), {
