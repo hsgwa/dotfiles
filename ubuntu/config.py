@@ -10,8 +10,10 @@ define_keymap(None, {
 	K("Alt-m"): K("Shift-DOWN"),
 	K("Alt-COMMA"): K("Shift-UP"),
 	K("Alt-DOT"): K("Shift-RIGHT"),
+	K("Alt-y"): K("END"),
 	K("Alt-u"): K("PAGE_DOWN"),
 	K("Alt-i"): K("PAGE_UP"),
+	K("Alt-o"): K("HOME"),
 	K("Alt-KEY_1"): K("F1"),
 	K("Alt-KEY_2"): K("F2"),
 	K("Alt-KEY_3"): K("F3"),
@@ -23,6 +25,9 @@ define_keymap(None, {
 	K("Alt-KEY_9"): K("F9"),
 	K("Alt-KEY_0"): K("F10"),
 	K("Alt-GRAVE"): K("DELETE"),
+	K("Alt-a"): K("VOLUMEDOWN"),
+	K("Alt-s"): K("VOLUMEUP"),
+	K("Alt-d"): K("MUTE"),
 }, "Default")
 
 define_keymap(re.compile("Gnome-terminal"), {
