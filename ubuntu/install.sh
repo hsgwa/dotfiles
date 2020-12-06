@@ -112,15 +112,15 @@ else
 	echo emacs が見つかりました。emacsのインストールをスキップします。
 fi
 
-# octave のインストール
-if [ "$(grep -r octave /etc/apt)" = "" ]; then
-	echo リポジトリ /ppa.launchpad.net/octave/stable/ubuntu が見つかりません。リポジトリの追加をします。
-	sudo add-apt-repository ppa:octave/stable
-else
-	echo リポジトリ packages.microsoft.com/repos/vscode が見つかりました。リポジトリの追加をスキップします。
-fi
-sudo apt install -y octave
-sudo apt install -y liboctave-dev
+# # octave のインストール
+# if [ "$(grep -r octave /etc/apt)" = "" ]; then
+# 	echo リポジトリ /ppa.launchpad.net/octave/stable/ubuntu が見つかりません。リポジトリの追加をします。
+# 	sudo add-apt-repository ppa:octave/stable
+# else
+# 	echo リポジトリ packages.microsoft.com/repos/vscode が見つかりました。リポジトリの追加をスキップします。
+# fi
+# sudo apt install -y octave
+# sudo apt install -y liboctave-dev
 
 # install Ricty Diminished
 if [ "$(fc-list | grep "Ricty Diminished")" = "" ]; then
