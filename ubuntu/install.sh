@@ -29,6 +29,7 @@ sudo apt install -y libwebkitgtk-3.0-dev
 sudo apt install -y offlineimap
 sudo apt install -y notmuch
 sudo apt install -y gnutls-bin
+sudo apt install -y tig
 # notmuch setup && notmuch new
 sudo apt install -y sqlite3
 gem install taskjuggler
