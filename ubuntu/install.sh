@@ -190,6 +190,8 @@ else
 	echo mouse.shがcrontabに追加されています。処理をスキップします。
 fi
 
+echo  '{"env": "private"}' > ~/.emacs_setting
+
 echo "Copy this setting to ~/.bashrc."
 echo "-----------------"
 echo "alias ranger='ranger --choosedir=\$HOME/.rangerdir; LASTDIR=\`cat \$HOME/.rangerdir\`; cd \$LASTDIR'"
