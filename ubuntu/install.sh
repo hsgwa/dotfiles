@@ -89,7 +89,8 @@ sudo mkdir -p /etc/opt/xkeysnail
 sudo ln -sf ~/dotfiles/ubuntu/config.py /etc/opt/xkeysnail
 
 mkdir -p ~/.config/systemd/user
-cp ~/dotfiles/ubuntu/xkeysnail.service ~/.config/systemd/user/
+sudo ln -sf ~/dotfiles/ubuntu/xkeysnail.service ~/.config/systemd/user/
+
 
 systemctl --user enable xkeysnail
 systemctl --user start xkeysnail
@@ -182,6 +183,12 @@ sudo apt install -y docker-compose
 sudo apt install -y texlive-base texlive-latex-base dvipng texlive-latex-extra
 sudo apt install -y cmigemo
 
+
+ln -s ~/dotfiles/ubuntu/links/reload.desktop ~/.local/share/applications/reload.desktop
+ln -s ~/dotfiles/ubuntu/links/deco.desktop ~/.local/share/applications/deco.desktop
+ln -s ~/dotfiles/ubuntu/links/xmind.desktop ~/.local/share/applications/xmind.desktop
+
+ln -s ~/dotfiles/ubuntu/nvim/ ~/.config/
 
 if [ $(crontab -l | grep mouse.sh | wc -l ) -eq 0 ]; then
 	echo mouse.shをcrontabへ追加します。
