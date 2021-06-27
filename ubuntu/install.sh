@@ -32,6 +32,7 @@ sudo apt install -y gnutls-bin
 sudo apt install -y tig
 # notmuch setup && notmuch new
 sudo apt install -y sqlite3
+sudo apt install -y emacs-mozc*
 gem install taskjuggler
 
 # Visual Studio Code のインストール
